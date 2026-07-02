@@ -52,19 +52,9 @@ PDF나 학사요람처럼 파일 형태로 제공되는 공식 문서 기반 질
 
 
 ## 5. System Architecture
-```mermaid
-flowchart LR
-    A[User Question] --> B[Frontend<br/>React]
-    B --> C[FastAPI Server]
-    C --> D[Question Embedding]
-    D --> E[FAISS Vector Search]
-    E --> F[Chunk ID Mapping]
-    F --> G[MariaDB Metadata]
-    G --> H[Context Builder]
-    H --> I[LLM]
-    I --> J[Answer with Sources]
-    J --> B
-```
+
+<img width="1172" height="646" alt="image" src="https://github.com/user-attachments/assets/74708184-e768-46a2-a694-7d06011674b8" />
+
 <img width="1621" height="658" alt="image" src="https://github.com/user-attachments/assets/76bef2f9-625e-465d-8372-f4889092abb4" />
 
 
@@ -90,6 +80,7 @@ flowchart LR
     F --> G[FAISS Index]
     E --> H[MariaDB Metadata]
 ```
+![Uploading image.png…]()
 
 
 ## 8. Evaluation
