@@ -80,7 +80,8 @@ flowchart LR
     F --> G[FAISS Index]
     E --> H[MariaDB Metadata]
 ```
-![Uploading image.png…]()
+
+<img width="937" height="677" alt="image" src="https://github.com/user-attachments/assets/189a5e9f-022a-45b3-a4f2-312b9520dd08" />
 
 
 ## 8. Evaluation
@@ -135,24 +136,7 @@ context 선별 개선이 필요함을 확인했습니다.
 - 계층적 구조를 이루는 학교 웹페이지이므로, Graph RAG구조를 도입해 성능을 향상하고자 합니다.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+## 11. How to Run
 실행을 위해서 아래 절차를 따라 하세요
 
 1. faiss index와 pkl을 다운 받고 /v0.9src/aidata에 넣기 (aidata 폴더 생성해야함)
