@@ -13,7 +13,7 @@ LLM+RAG 기반 Q&A 챗봇 서비스입니다.
 기존 검색 시스템과 일반 챗봇의 한계를 보완하는 것을 목표로 했습니다.
 
 
-2. Problem
+## 2. Problem
 가천대학교의 학사, 행정 정보는 홈페이지, 공지사항, 학사요람, PDF, HWP 등
 여러 경로에 분산되어 있어 사용자가 원하는 정보를 빠르게 찾기 어렵습니다.
 
@@ -24,7 +24,7 @@ LLM+RAG 기반 Q&A 챗봇 서비스입니다.
 PDF나 학사요람처럼 파일 형태로 제공되는 공식 문서 기반 질문에는 한계가 있었습니다
 
 
-3. Solution
+## 3. Solution
 본 프로젝트는 학교 공식 문서를 직접 수집하고,
 전처리, 청킹, 임베딩 과정을 거쳐 FAISS 기반 벡터 인덱스를 구축했습니다.
 
@@ -37,7 +37,7 @@ PDF나 학사요람처럼 파일 형태로 제공되는 공식 문서 기반 질
 필요한 정보를 자연어 질문 하나로 확인할 수 있습니다.
 
 
-4. Key Features
+## 4. Key Features
 - 자연어 기반 학사, 행정 Q&A
 - 학교 공식 문서 크롤링 및 파일 수집
 - PDF / HTML 문서 텍스트 추출
@@ -51,7 +51,7 @@ PDF나 학사요람처럼 파일 형태로 제공되는 공식 문서 기반 질
 - 문맥 확장 및 re-ranking 기반 검색 품질 개선
 
 
-5. System Architecture
+## 5. System Architecture
 ```mermaid
 flowchart LR
     A[User Question] --> B[Frontend<br/>React]
@@ -79,7 +79,7 @@ MariaDB에 저장된 원문, 문서명, URL, metadata를 조회합니다.
 최종 top k개를 LLM 프롬프트를 구성하여 문서에 근거한 답변을 생성합니다.
 
 
-7. Data Pipeline
+## 7. Data Pipeline
 ```mermaid
 flowchart LR
     A[School Website / Documents] --> B[Crawling]
@@ -92,7 +92,7 @@ flowchart LR
 ```
 
 
-8. Evaluation
+## 8. Evaluation
 RAGAS를 사용하여 retrieval 품질과 generation 품질을 분리 평가했습니다.
 
 | Metric | Score |
@@ -107,7 +107,7 @@ Faithfulness가 높게 나타나 답변이 검색된 문서 근거에서 크게 
 context 선별 개선이 필요함을 확인했습니다.
 
 
-9. Tech Stack
+## 9. Tech Stack
 ### AI / RAG
 - gpt-oss-20b
 - qwen2.5-7b
@@ -136,7 +136,7 @@ context 선별 개선이 필요함을 확인했습니다.
 - Uvicorn
 
 
-10. Limitations & Future Work
+## 10. Limitations & Future Work
 - 단일 청크 중심 검색에서는 문맥 단절 문제가 발생할 수 있습니다.
 - Answer Relevancy 개선을 위해 re-ranking과 문맥 확장 로직을 추가로 고도화할 필요가 있습니다.
 - 학교 문서는 학기와 연도에 따라 변경되므로 주기적인 크롤링 및 인덱스 갱신이 필요합니다.
